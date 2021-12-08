@@ -39,7 +39,7 @@ end)
 Citizen.CreateThread( function()
 	local heading, lastHeading = 0, 1
 	while true do
-	Citizen.Wait(0)
+	Citizen.Wait(50)
 	local camRot = GetGameplayCamRot(0)
 	heading = tostring(round(360.0 - ((camRot.z + 360.0) % 360.0)))
 		if heading == '360' then heading = '0' end

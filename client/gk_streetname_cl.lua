@@ -36,7 +36,7 @@ Citizen.CreateThread( function()
 	local lastStreetA = 0
 	local lastStreetB = 0
 	while true do
-		Citizen.Wait(0)
+		Citizen.Wait(1000)
 		local playerPos = GetEntityCoords(PlayerPedId(), true)
 		local streetA, streetB = GetStreetNameAtCoord(playerPos.x, playerPos.y, playerPos.z)
 		street = {}
