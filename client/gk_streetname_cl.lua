@@ -28,9 +28,13 @@ RegisterNUICallback('HideStreets', function()
 end) 
 
 RegisterNetEvent("hud:client:HideStreets", function()
-	TriggerEvent("lj-compass:client:showStreets")
-	TriggerEvent("hud:client:checklistSounds")
+	if IsPedInAnyVehicle(PlayerPedId()) then
+		TriggerEvent("lj-compass:client:showStreets")
+		TriggerEvent("hud:client:checklistSounds")
+	else 
+	end
 end)
+
 
 Citizen.CreateThread( function()
 	local lastStreetA = 0
