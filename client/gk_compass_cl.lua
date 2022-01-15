@@ -28,11 +28,10 @@ RegisterNUICallback('HideCompass', function()
 end) 
 
 RegisterNetEvent("hud:client:HideCompass", function()
-	if  IsPedInAnyVehicle(PlayerPedId()) then
+	if IsPedInAnyVehicle(PlayerPedId()) then
 		TriggerEvent("lj-compass:client:showCompass")
 		TriggerEvent("hud:client:checklistSounds")
 	else 
-		TriggerEvent('QBCore:Notify', "Low Fuel!", "error")
 	end
 end)
 
